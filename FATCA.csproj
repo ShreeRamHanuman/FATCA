@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C5F7FB0-8ECE-4664-A98A-55053E83EAE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FATCA</RootNamespace>
+    <AssemblyName>FATCA</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\puskar kc\Desktop\FATCA setup .net 2.0\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>FATCA</ProductName>
+    <PublisherName>Metlife Alico Nepal</PublisherName>
+    <SuiteName>FATCA</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>\\10.40.80.17\fatca_report\dotnetfx45_full_x86_x64.exe</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9451A76010B89F8F942F626108720F76EC1C0856</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FATCA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBM.Data.DB2.iSeries, Version=10.0.0.0, Culture=neutral, PublicKeyToken=9cdb2ebfb1f93a26">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\IBM\Client Access\IBM.Data.DB2.iSeries.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ExcelCreatorClass.cs" />
+    <Compile Include="BLL\ExceptionManagerClass.cs" />
+    <Compile Include="BLL\fatcaBLL.cs" />
+    <Compile Include="BLL\PreApendSpaces.cs" />
+    <Compile Include="BLL\UserInfoBO.cs" />
+    <Compile Include="dataEligliPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataEligliPolicy.Designer.cs">
+      <DependentUpon>dataEligliPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\DbConClass.cs" />
+    <Compile Include="DLL\fatcaDAL.cs" />
+    <Compile Include="DLL\ImportToMsSql.cs" />
+    <Compile Include="DLL\UserManagerClass.cs" />
+    <Compile Include="FATCACHANGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCACHANGE.Designer.cs">
+      <DependentUpon>FATCACHANGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCACHPOL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCACHPOL.Designer.cs">
+      <DependentUpon>FATCACHPOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCACLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCACLS.Designer.cs">
+      <DependentUpon>FATCACLS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCACLSCOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCACLSCOM.Designer.cs">
+      <DependentUpon>FATCACLSCOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCACLSNCOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCACLSNCOM.Designer.cs">
+      <DependentUpon>FATCACLSNCOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCAEXTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCAEXTG.Designer.cs">
+      <DependentUpon>FATCAEXTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCAEXTG1M.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCAEXTG1M.Designer.cs">
+      <DependentUpon>FATCAEXTG1M.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCANEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCANEW.Designer.cs">
+      <DependentUpon>FATCANEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FATCAUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATCAUS.Designer.cs">
+      <DependentUpon>FATCAUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataChange.Designer.cs">
+      <DependentUpon>frmDataChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataDownload.Designer.cs">
+      <DependentUpon>frmDataDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmErrorLogFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmErrorLogFile.Designer.cs">
+      <DependentUpon>frmErrorLogFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFataCureDocExpiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFataCureDocExpiry.Designer.cs">
+      <DependentUpon>frmFataCureDocExpiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatcaClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatcaClass.Designer.cs">
+      <DependentUpon>frmFatcaClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOADFATCAEXTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOADFATCAEXTG.Designer.cs">
+      <DependentUpon>LOADFATCAEXTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOADFATCANEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOADFATCANEW.Designer.cs">
+      <DependentUpon>LOADFATCANEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dataEligliPolicy.resx">
+      <DependentUpon>dataEligliPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCACHANGE.resx">
+      <DependentUpon>FATCACHANGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCACHPOL.resx">
+      <DependentUpon>FATCACHPOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCACLS.resx">
+      <DependentUpon>FATCACLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCACLSCOM.resx">
+      <DependentUpon>FATCACLSCOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCACLSNCOM.resx">
+      <DependentUpon>FATCACLSNCOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCAEXTG.resx">
+      <DependentUpon>FATCAEXTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCAEXTG1M.resx">
+      <DependentUpon>FATCAEXTG1M.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCANEW.resx">
+      <DependentUpon>FATCANEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FATCAUS.resx">
+      <DependentUpon>FATCAUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataChange.resx">
+      <DependentUpon>frmDataChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataDownload.resx">
+      <DependentUpon>frmDataDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmErrorLogFile.resx">
+      <DependentUpon>frmErrorLogFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFataCureDocExpiry.resx">
+      <DependentUpon>frmFataCureDocExpiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatcaClass.resx">
+      <DependentUpon>frmFatcaClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOADFATCAEXTG.resx">
+      <DependentUpon>LOADFATCAEXTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOADFATCANEW.resx">
+      <DependentUpon>LOADFATCANEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="FATCA_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-pgp-signature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-pgp-signature1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_tcm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MetLife-life-insurance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatca1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_tcm1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MetLife_Alico_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metlife word logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metlife Bg color.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metlife word logo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eligible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownloadMainForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgtest.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcaImg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fatcaImgSmall.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bckgrdTest.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EligibleSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpireSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClassSmallBold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownloadSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snoopy-brand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EligibleBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FATCA-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FATCA-logosmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FATCA-logosmallblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metlifefor ps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkBg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="FATCA.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="IBM.Data.DB2.iSeries">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

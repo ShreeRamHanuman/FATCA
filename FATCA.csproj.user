@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\puskar kc\Desktop\FATCA setup .net 2.0\|C:\Users\puskar kc\Desktop\FATCA setup .net 3\|C:\Users\puskar kc\Desktop\FATCA setup\|C:\Users\puskar kc\Desktop\image for fatca dev\|C:\Users\puskar kc\Desktop\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory>\\10.40.80.17\fatca_report\dotnetfx45_full_x86_x64.exe|\\\\10.40.80.17\fatca_report\dotnetfx45_full_x86_x64.exe|C:\Users\puskar kc\Desktop\Fatca Document Final</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
